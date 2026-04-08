@@ -561,4 +561,8 @@ function confirmBooking(){const productName=document.getElementById('productSele
 function resetBooking(){document.getElementById('startDate').value='';document.getElementById('endDate').value='';document.getElementById('productSelect').value='';document.getElementById('dateInfo').textContent='';document.getElementById('availabilityResult').style.display='none';document.getElementById('bookingForm').style.display='block';document.getElementById('bookingSuccess').style.display='none'}
 
 // ===== ACCORDION & SHOW MORE =====
-function toggleShowMore(btn,gridId){const grid=document.getElementById(gridId);const isExpanded=grid.classList.toggle('expanded');grid.classList.toggle('capped',!isExpanded);btn.querySelector('.label').
+function toggleShowMore(btn,gridId){const grid=document.getElementById(gridId);const isExpanded=grid.classList.toggle('expanded');grid.classList.toggle('capped',!isExpanded);btn.querySelector('.label').textContent=isExpanded?'Show fewer':'Show all';btn.classList.toggle('flipped',isExpanded)}
+function toggleAccordion(btn){const item=btn.closest('.accordion-item');const wasOpen=item.classList.contains('open');document.querySelectorAll('.accordion-item').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open')}
+</script>
+</body>
+</html>
