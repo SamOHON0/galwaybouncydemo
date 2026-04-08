@@ -57,8 +57,10 @@
     @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
     /* Hero */
     .hero{padding:24px 0 16px}.hero-grid{display:grid;gap:24px;align-items:center;grid-template-columns:1.4fr 1fr}
-    .hero-title{font-family:var(--heading);font-weight:800;font-size:clamp(2.2rem,4.5vw,3.8rem);line-height:1}
+    .hero-title{font-family:var(--heading);font-weight:800;font-size:clamp(2.4rem,5.5vw,4.4rem);line-height:.95;letter-spacing:-.02em}
     .hero-title .hl{background:linear-gradient(135deg,#f59e0b,#e84c4c,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:gshift 4s ease infinite}
+    .hero-subtitle{font-family:var(--heading);font-size:clamp(1rem,2vw,1.35rem);font-weight:700;color:var(--teal);margin-top:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .hero-subtitle .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block}
     @keyframes gshift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
     .hero-copy{font-size:1.02rem;color:var(--muted);line-height:1.7;margin:14px 0 18px;max-width:540px}.hero-actions{display:flex;flex-wrap:wrap;gap:10px}
     .hero-visual{position:relative;display:grid;place-items:center;padding:24px 20px;border-radius:32px;background:radial-gradient(circle at top,rgba(255,244,212,.85),#fff 60%);box-shadow:var(--shadow);border:1px dashed rgba(243,158,67,.18);overflow:hidden}
@@ -178,9 +180,29 @@
     .cta-banner{padding:32px;border-radius:var(--radius);background:linear-gradient(135deg,var(--primary),#4a9eef);color:#fff;text-align:center;box-shadow:0 12px 40px rgba(24,114,189,.25)}
     .cta-banner h2{font-family:var(--heading);font-size:1.6rem;margin-bottom:8px}.cta-banner p{opacity:.85;margin-bottom:16px;font-size:.95rem}
     .cta-banner .btn{background:#fff;color:var(--primary);box-shadow:0 8px 20px rgba(0,0,0,.12)}
+    /* Stats bar */
+    .stats-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;padding:8px 0}
+    .stat{text-align:center;padding:24px 16px;border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow-sm)}
+    .stat-num{font-family:var(--heading);font-size:2rem;font-weight:800;line-height:1}
+    .stat-num.c1{color:var(--primary)}.stat-num.c2{color:var(--secondary)}.stat-num.c3{color:var(--teal)}.stat-num.c4{color:var(--purple)}
+    .stat-label{font-size:.84rem;color:var(--muted);margin-top:4px}
+    /* Steps */
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+    .step{text-align:center;padding:28px 20px;border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow-sm);position:relative}
+    .step-icon{font-size:2.4rem;margin-bottom:12px}
+    .step-num{position:absolute;top:14px;left:14px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:.82rem;color:#fff}
+    .step:nth-child(1) .step-num{background:var(--primary)}.step:nth-child(2) .step-num{background:var(--secondary)}.step:nth-child(3) .step-num{background:var(--teal)}.step:nth-child(4) .step-num{background:var(--purple)}
+    .step h4{font-family:var(--heading);font-size:1.05rem;margin-bottom:6px}.step p{color:var(--muted);font-size:.88rem;line-height:1.55}
+    /* Events grid */
+    .events-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+    .event-chip{padding:16px;border-radius:var(--radius-sm);background:var(--surface);box-shadow:var(--shadow-sm);text-align:center;font-weight:600;font-size:.92rem;transition:transform .2s}
+    .event-chip:hover{transform:translateY(-2px)}
+    .event-chip span{display:block;font-size:1.6rem;margin-bottom:6px}
+    /* Mini testimonial */
+    .mini-testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
     /* Responsive */
     @media(max-width:768px){.hero-grid,.booking-grid{grid-template-columns:1fr}.nav,.topbar-actions{display:none}.burger{display:flex}}
-    @media(max-width:640px){.page{padding:0 14px}.btn:not(.btn-sm):not(.social-link){width:100%}.form-row,.area-checker-row{flex-direction:column}.tcard{min-width:270px}.card-grid,.featured-grid{grid-template-columns:1fr}.brand-mark{height:40px}.hero-title{font-size:2rem}.promo{font-size:.84rem}.weather-row{flex-direction:column;text-align:center}}
+    @media(max-width:640px){.page{padding:0 14px}.btn:not(.btn-sm):not(.social-link){width:100%}.form-row,.area-checker-row{flex-direction:column}.tcard{min-width:270px}.card-grid,.featured-grid{grid-template-columns:1fr}.brand-mark{height:40px}.hero-title{font-size:2.2rem}.promo{font-size:.84rem}.weather-row{flex-direction:column;text-align:center}}
   </style>
 </head>
 <body>
@@ -223,7 +245,12 @@
     <section class="hero">
       <div class="hero-grid">
         <div>
-          <h1 class="hero-title">Galway's top <span class="hl">bouncy castle</span> &amp; obstacle course hire. &#127880;</h1>
+          <h1 class="hero-title">Galway's #1 <span class="hl">Bouncy Castle</span> &amp; Obstacle Course Hire</h1>
+          <div class="hero-subtitle">
+            <span>&#127881; Family-Run</span><span class="dot"></span>
+            <span>&#128205; Galway City &amp; County</span><span class="dot"></span>
+            <span>&#11088; 100% Satisfaction</span>
+          </div>
           <p class="hero-copy">Family-run, covering Galway City and County. Great value, excellent service and 100% customer satisfaction on every hire.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" data-page="booking">Reserve your date</a>
@@ -252,6 +279,65 @@
         <div class="card"><div class="card-img">&#127880;</div><div class="card-body"><span class="card-tag tag-combo">Combo Unit</span><h3>Bouncy Castle &amp; Slide Combo</h3><div class="card-price">&euro;200</div><p class="card-desc">Spacious bounce area with slide. Paw Patrol, Peppa Pig, Princess and more.</p><a class="btn btn-primary" data-page="booking">Book this</a></div></div>
       </div>
     </section>
+
+    <!-- How it works -->
+    <section class="section">
+      <div class="section-head"><h2>&#128161; How it works</h2><p>Booking your bouncy castle is easy as 1-2-3.</p></div>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><div class="step-icon">&#128197;</div><h4>Pick your date</h4><p>Choose your event date and check what's available for hire.</p></div>
+        <div class="step"><div class="step-num">2</div><div class="step-icon">&#127984;</div><h4>Choose your castle</h4><p>Browse obstacle courses, high slides, combo units and marquees.</p></div>
+        <div class="step"><div class="step-num">3</div><div class="step-icon">&#128666;</div><h4>We deliver &amp; set up</h4><p>We arrive on time, set up everything safely, and collect after your event.</p></div>
+        <div class="step"><div class="step-num">4</div><div class="step-icon">&#127881;</div><h4>Party time!</h4><p>Sit back and watch the kids have the time of their lives.</p></div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section">
+      <div class="stats-bar">
+        <div class="stat"><div class="stat-num c1">15+</div><div class="stat-label">Inflatables to choose from</div></div>
+        <div class="stat"><div class="stat-num c2">1000s</div><div class="stat-label">Happy kids every year</div></div>
+        <div class="stat"><div class="stat-num c4">24hr</div><div class="stat-label">Free cancellation notice</div></div>
+      </div>
+    </section>
+
+    <!-- Events we cover -->
+    <section class="section">
+      <div class="section-head"><h2>&#127874; Events we cover</h2><p>Whatever the occasion, we've got you covered.</p></div>
+      <div class="events-grid">
+        <div class="event-chip"><span>&#127874;</span>Birthday Parties</div>
+        <div class="event-chip"><span>&#9962;</span>Communions</div>
+        <div class="event-chip"><span>&#128218;</span>Confirmations</div>
+        <div class="event-chip"><span>&#127965;</span>Summer Camps</div>
+        <div class="event-chip"><span>&#127970;</span>Corporate Events</div>
+        <div class="event-chip"><span>&#127830;</span>BBQs &amp; Parties</div>
+        <div class="event-chip"><span>&#127950;</span>Sports Days</div>
+        <div class="event-chip"><span>&#127883;</span>Family Fun Days</div>
+        <div class="event-chip" style="background:var(--accent-soft);color:#6b4a0a;font-weight:700"><span>&#10024;</span>&amp; many more!</div>
+      </div>
+    </section>
+
+    <!-- Testimonial preview -->
+    <section class="section">
+      <div class="section-head"><h2>&#128172; What people say</h2><p>Real feedback from Galway families. <a data-page="about" style="color:var(--primary);font-weight:700;cursor:pointer;">Read all reviews &rarr;</a></p></div>
+      <div class="mini-testimonials">
+        <div class="tcard"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"A very professional and efficient service, from ordering, to drop off to pick up. Highly recommend Denise and team."</p><cite>Sean O'Connell</cite></div>
+        <div class="tcard" style="border-left-color:#e84c4c"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Went over and beyond with a large Crocodile Obstacle Course at short notice. They saved the party."</p><cite>Noel Kyne</cite></div>
+        <div class="tcard" style="border-left-color:#36b5b0"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"So helpful with providing links and information that I had to go with ye. Great service from start to finish."</p><cite>Laura Cunningham</cite></div>
+      </div>
+    </section>
+
+    <!-- Quick area check -->
+    <section class="section">
+      <div style="padding:28px;border-radius:var(--radius);background:var(--warm);box-shadow:var(--shadow);border:1.5px dashed rgba(243,158,27,.2);display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between">
+        <div style="flex:1;min-width:240px">
+          <h3 style="font-family:var(--heading);font-size:1.2rem;margin-bottom:6px">&#128205; Do we deliver to your area?</h3>
+          <p style="color:var(--muted);font-size:.92rem">We cover 15+ areas across Galway City and County. Check if we come to you.</p>
+        </div>
+        <a class="btn btn-primary" data-page="areas">Check your area</a>
+      </div>
+    </section>
+
+    <!-- CTA -->
     <section class="section">
       <div class="cta-banner">
         <h2>&#127880; Ready to make your party unforgettable?</h2>
