@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galway Bouncy Castles | Bouncy Castle, Obstacle Course & Slide Hire</title>
-  <meta name="description" content="Family-run bouncy castle hire covering Galway City & County. Obstacle courses, high slides, combo units and marquees." />
+  <meta name="description" content="Galway Bouncy Castles - family-run inflatable hire with online booking. Obstacle courses, high slides, combo units &amp; add-ons. Covering Galway City &amp; County." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -24,6 +24,7 @@
     .balloon{position:absolute;bottom:-80px;width:40px;height:50px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;animation:brise linear infinite;opacity:.2}
     .balloon::after{content:'';position:absolute;bottom:-20px;left:50%;width:1px;height:20px;background:rgba(0,0,0,.12);transform:translateX(-50%)}
     .balloon:nth-child(1){left:8%;background:#38BDF8;animation-duration:22s}.balloon:nth-child(2){left:25%;background:#BAE6FD;animation-duration:28s;animation-delay:5s}.balloon:nth-child(3){left:55%;background:#0369A1;animation-duration:25s;animation-delay:3s}.balloon:nth-child(4){left:80%;background:#0C4A6E;animation-duration:30s;animation-delay:8s}
+    @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
     @keyframes brise{0%{bottom:-80px;transform:translateX(0) rotate(0);opacity:.25}50%{transform:translateX(20px) rotate(4deg)}100%{bottom:110%;transform:translateX(-10px) rotate(-2deg);opacity:0}}
     /* Topbar */
     .topbar{display:flex;gap:12px;justify-content:space-between;align-items:center;padding:10px 20px;background:var(--bg);border-bottom:3px solid var(--border);position:sticky;top:0;z-index:100;margin:0 -20px;width:calc(100% + 40px)}
@@ -236,6 +237,7 @@
         <a class="social-link" href="https://www.facebook.com/galwaybouncycastles/" target="_blank" rel="noreferrer">&#128216;</a>
         <a class="social-link" href="https://www.instagram.com/galway_bouncy_castles" target="_blank" rel="noreferrer">&#128247;</a>
         <a class="social-link" href="https://wa.me/+353871019000" target="_blank" rel="noreferrer">&#128172;</a>
+        <a class="social-link" href="https://www.youtube.com/@galwaybouncycastles" target="_blank" rel="noreferrer">&#127909;</a>
       </div>
     </div>
   </div>
@@ -265,6 +267,24 @@
       </div>
     </section>
     <div class="promo">&#127873; <strong>2-Day Special:</strong> Book two consecutive days, get the 2nd for only &euro;30 extra! <span style="font-size:.82rem;opacity:.8">(Excl. April/May, subject to availability)</span></div>
+    
+    <!-- Scrolling ticker -->
+    <div style="overflow:hidden;border-top:3px solid var(--border);border-bottom:3px solid var(--border);background:var(--primary);padding:10px 0;margin:10px 0">
+      <div class="ticker-wrap" style="display:flex;width:max-content;animation:ticker 28s linear infinite;white-space:nowrap">
+        <span style="font-weight:700;font-size:.88rem;padding:0 30px">&#127881; Online Booking Available</span>
+        <span style="font-weight:700;font-size:.88rem;padding:0 30px">&#129518; Tables, Chairs &amp; Marquees as Add-Ons</span>
+        <span style="font-weight:700;font-size:.88rem;padding:0 30px">&#128205; Galway City &amp; County</span>
+        <span style="font-weight:700;font-size:.88rem;padding:0 30px">&#128222; 087 101 9000</span>
+        <span style="font-weight:700;font-size:.88rem;padding:0 30px">&#9989; 100% Satisfaction Guaranteed</span>
+        <span style="font-weight:700;font-size:.88rem;padding:0 30px">&#127947; 15+ Inflatables Available</span>
+        <span style="font-weight:700;font-size:.88rem;padding:0 30px">&#127881; Online Booking Available</span>
+        <span style="font-weight:700;font-size:.88rem;padding:0 30px">&#129518; Tables, Chairs &amp; Marquees as Add-Ons</span>
+        <span style="font-weight:700;font-size:.88rem;padding:0 30px">&#128205; Galway City &amp; County</span>
+        <span style="font-weight:700;font-size:.88rem;padding:0 30px">&#128222; 087 101 9000</span>
+        <span style="font-weight:700;font-size:.88rem;padding:0 30px">&#9989; 100% Satisfaction Guaranteed</span>
+        <span style="font-weight:700;font-size:.88rem;padding:0 30px">&#127947; 15+ Inflatables Available</span>
+      </div>
+    </div>
     <div class="info-row">
       <div class="info-card"><div class="ic ic-y">&#127881;</div><div><p>Obstacle courses, high slides, combo units and marquees for every occasion.</p></div></div>
       <div class="info-card"><div class="ic ic-t">&#128205;</div><div><p>Delivery, setup and friendly support across Galway City &amp; County.</p></div></div>
@@ -334,6 +354,25 @@
           <p style="color:var(--muted);font-size:.92rem">We cover 15+ areas across Galway City and County. Check if we come to you.</p>
         </div>
         <a class="btn btn-primary" data-page="areas">Check your area</a>
+      </div>
+    </section>
+
+    <!-- YouTube Videos -->
+    <section class="section">
+      <div class="section-head"><h2>&#127909; Watch us in action</h2><p>See our inflatables in action. More videos on our <a href="https://www.youtube.com/@galwaybouncycastles" target="_blank" rel="noreferrer" style="color:var(--primary);font-weight:700">YouTube channel &rarr;</a></p></div>
+      <div style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+        <div style="border-radius:var(--radius);overflow:hidden;border:3px solid var(--border);box-shadow:var(--shadow);background:var(--surface)">
+          <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden">
+            <!-- Replace VIDEO_ID_1 with actual YouTube video ID -->
+            <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/VIDEO_ID_1" title="Galway Bouncy Castles video 1" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+        <div style="border-radius:var(--radius);overflow:hidden;border:3px solid var(--border);box-shadow:var(--shadow);background:var(--surface)">
+          <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden">
+            <!-- Replace VIDEO_ID_2 with actual YouTube video ID -->
+            <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/VIDEO_ID_2" title="Galway Bouncy Castles video 2" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -458,6 +497,15 @@
             <div class="form-row"><div class="form-group"><label class="label">Start date</label><input id="startDate" type="date" class="input" /></div><div class="form-group"><label class="label">End date</label><input id="endDate" type="date" class="input" /></div></div>
             <div id="dateInfo" style="font-size:.88rem;color:var(--muted);margin-bottom:14px"></div>
             <div class="form-group"><label class="label">Choose your castle</label><select id="productSelect" class="select"><option value="">Select a product</option><option value="jaws">Jaws The Shark High Slide - &euro;280</option><option value="disco">Disco Clubhouse Obstacle Course - &euro;300</option><option value="combo">Bouncy Castle &amp; Slide Combo Unit - &euro;200</option></select></div>
+            <div class="form-group" style="margin-top:4px">
+              <label class="label">&#129518; Add-ons (optional)</label>
+              <div style="display:grid;gap:8px;padding:14px;border-radius:var(--radius-sm);border:2px solid var(--border);background:var(--accent-soft)">
+                <label style="display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:500;cursor:pointer"><input type="checkbox" name="addon" value="tables" style="width:16px;height:16px;cursor:pointer"> Tables &amp; Chairs (price on enquiry)</label>
+                <label style="display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:500;cursor:pointer"><input type="checkbox" name="addon" value="marquee" style="width:16px;height:16px;cursor:pointer"> Party Marquee 8x4m (price on enquiry)</label>
+                <label style="display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:500;cursor:pointer"><input type="checkbox" name="addon" value="gazebo" style="width:16px;height:16px;cursor:pointer"> Gazebo 4.5m x 3m (price on enquiry)</label>
+              </div>
+              <p style="font-size:.82rem;color:var(--muted);margin-top:6px">Add-on pricing will be confirmed when we get back to you.</p>
+            </div>
             <div id="availabilityResult" style="display:none;padding:14px;border-radius:var(--radius-sm);margin-bottom:14px;font-size:.9rem;line-height:1.6"></div>
             <button class="btn btn-primary" style="width:100%" onclick="checkAvailability()">Check availability</button>
           </div>
@@ -470,7 +518,8 @@
           <div class="note-box"><strong>Demo booking system.</strong> Availability is simulated.</div>
         </div>
         <div class="sidebar-stack">
-          <div class="side-card side-teal"><h4>Contact us directly</h4><div class="contact-list"><div class="contact-row"><span>&#128222;</span><a href="tel:0871019000"><strong>087 101 9000</strong></a></div><div class="contact-row"><span>&#9993;&#65039;</span><a href="/cdn-cgi/l/email-protection#bbdcdad7ccdac2d9d4ced5d8d2d5dcd8dac8cfd7dec8fbdcd6dad2d795d8d4d6"><span class="__cf_email__" data-cfemail="94f3f5f8e3f5edf6fbe1faf7fdfaf3f7f5e7e0f8f1e7d4f3f9f5fdf8baf7fbf9">[email&#160;protected]</span></a></div><div class="contact-row"><span>&#128172;</span><a href="https://wa.me/+353871019000" target="_blank" rel="noreferrer">WhatsApp</a></div><div class="contact-row"><span>&#128216;</span><a href="https://www.facebook.com/galwaybouncycastles/" target="_blank" rel="noreferrer">Facebook</a></div><div class="contact-row"><span>&#128247;</span><a href="https://www.instagram.com/galway_bouncy_castles" target="_blank" rel="noreferrer">Instagram</a></div></div></div>
+          <div class="side-card side-teal"><h4>Contact us directly</h4><div class="contact-list"><div class="contact-row"><span>&#128222;</span><a href="tel:0871019000"><strong>087 101 9000</strong></a></div><div class="contact-row"><span>&#9993;&#65039;</span><a href="/cdn-cgi/l/email-protection#bbdcdad7ccdac2d9d4ced5d8d2d5dcd8dac8cfd7dec8fbdcd6dad2d795d8d4d6"><span class="__cf_email__" data-cfemail="94f3f5f8e3f5edf6fbe1faf7fdfaf3f7f5e7e0f8f1e7d4f3f9f5fdf8baf7fbf9">[email&#160;protected]</span></a></div><div class="contact-row"><span>&#128172;</span><a href="https://wa.me/+353871019000" target="_blank" rel="noreferrer">WhatsApp</a></div><div class="contact-row"><span>&#128216;</span><a href="https://www.facebook.com/galwaybouncycastles/" target="_blank" rel="noreferrer">Facebook</a></div><div class="contact-row"><span>&#128247;</span><a href="https://www.instagram.com/galway_bouncy_castles" target="_blank" rel="noreferrer">Instagram</a></div><div class="contact-row"><span>&#127909;</span><a href="https://www.youtube.com/@galwaybouncycastles" target="_blank" rel="noreferrer">YouTube</a></div></div></div>
+          <div class="side-card side-white"><h4>&#128179; Payment</h4><p>We accept a deposit to secure your date, or full payment upfront. Secure online payment via <strong>Stripe</strong> (card, Apple Pay, Google Pay). Funds go straight to our account.</p></div>
           <div class="side-card side-warm"><h4>&#127873; 2-Day Deal</h4><p>Book two consecutive days, get the 2nd for only <strong>&euro;30 extra</strong>. Excludes April/May, subject to availability.</p></div>
           <div class="side-card side-white"><h4>Cancellation</h4><p>Free of charge with 24 hours notice. No hassle.</p></div>
         </div>
@@ -485,6 +534,7 @@
         <a class="social-link" href="https://www.facebook.com/galwaybouncycastles/" target="_blank" rel="noreferrer">&#128216;</a>
         <a class="social-link" href="https://www.instagram.com/galway_bouncy_castles" target="_blank" rel="noreferrer">&#128247;</a>
         <a class="social-link" href="https://wa.me/+353871019000" target="_blank" rel="noreferrer">&#128172;</a>
+        <a class="social-link" href="https://www.youtube.com/@galwaybouncycastles" target="_blank" rel="noreferrer">&#127909;</a>
       </div>
       <div class="footer-links">
         <a href="/cdn-cgi/l/email-protection#8deaece1faecf4efe2f8e3eee4e3eaeeecfef9e1e8fecdeae0ece4e1a3eee2e0">Email</a>
